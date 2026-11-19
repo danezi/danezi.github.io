@@ -291,7 +291,28 @@ window.CONTENT = {
   ],
 
   certificates: [
-    { title: "IBM RAG and Agentic AI Professional Certificate (10 Kurse)", issuer: "IBM", date: { de: "Nov. 2026", en: "Nov 2026" }, url: "https://coursera.org/verify/professional-cert/9GM23QDYTAHH", highlight: true },
+    {
+      title: "IBM RAG and Agentic AI Professional Certificate", issuer: "IBM", date: { de: "Nov. 2026", en: "Nov 2026" },
+      url: "https://coursera.org/verify/professional-cert/9GM23QDYTAHH", highlight: true,
+      // 10 Kurszertifikate; Verify-Link je Kurs ergänzen, sobald bekannt (url: "https://coursera.org/verify/...")
+      courses: [
+        { title: "Develop Generative AI Applications: Get Started" },
+        { title: "Build RAG Applications: Get Started" },
+        { title: "Vector Databases for RAG: An Introduction" },
+        { title: "Advanced RAG with Vector Databases and Retrievers" },
+        { title: "Build Multimodal Generative AI Applications" },
+        { title: "Fundamentals of Building AI Agents", url: "https://coursera.org/verify/8AOD0EJJ8ZHD" },
+        { title: "Agentic AI with LangChain and LangGraph" },
+        { title: "Agentic AI with LangGraph, CrewAI, AutoGen and BeeAI" },
+        { title: "Build AI Agents using MCP" },
+        { title: "RAG and Agentic AI Capstone Project" }
+      ]
+    },
+    {
+      title: "RAG for Generative AI Applications (Specialization)", issuer: "IBM", date: { de: "Okt. 2026", en: "Oct 2026" },
+      url: "https://coursera.org/verify/specialization/2B5H65S6YI0B", highlight: true,
+      note: { de: "Umfasst die ersten 4 Kurse des Professional Certificate", en: "Covers the first 4 courses of the Professional Certificate" }
+    },
     { title: "Generative AI with Large Language Models", issuer: "AWS · DeepLearning.AI", date: { de: "Feb. 2026", en: "Feb 2026" }, url: "https://coursera.org/verify/GF5WYGO0BZEM", highlight: true },
     { title: "Developing AI Applications with Python and Flask", issuer: "IBM", date: { de: "März 2026", en: "Mar 2026" }, url: "https://coursera.org/verify/C9I9IXJ4FQ97" },
     { title: "Python for Data Science, AI & Development", issuer: "IBM", date: { de: "März 2026", en: "Mar 2026" }, url: "https://coursera.org/verify/RSBW4CO2NK7W" },

@@ -13,7 +13,7 @@
       "hero.lead": "Ich entwickle Webanwendungen und KI-Systeme vom Datenbankschema bis zur Oberfläche, mit Schwerpunkt auf RAG, Agentic AI und vertrauenswürdigen, datenschutzkonformen Systemen.",
       "hero.cv": "Lebenslauf herunterladen", "hero.contact": "Kontakt", "hero.photo": "Profilfoto ergänzen",
       "stats.users": "gleichzeitige Nutzer im Lasttest (Harbour2025)", "stats.aucValue": "0,957", "stats.auc": "ROC-AUC im ML-Modell (MediFlow)",
-      "stats.sinceValue": "seit 2023", "stats.since": "Berufserfahrung neben dem Studium", "stats.certs": "verifizierbare Zertifikate",
+      "stats.sinceValue": "seit 2023", "stats.since": "Berufserfahrung neben dem Studium", "stats.certs": "Zertifikate von IBM, AWS und Meta",
       "about.h": "Über mich",
       "about.text": "Ich studiere Informatik im Master mit Schwerpunkt Vertrauenswürdige Systeme an der Hochschule Bremerhaven. Davor habe ich den B.Sc. Technische Informatik an der Hochschule Bremen abgeschlossen, mit Bachelorarbeit (Note 1,3) und gefördert durch das Deutschlandstipendium. Seit 2023 arbeite ich neben dem Studium als Entwickler: zuerst im Full-Stack-Umfeld mit Java/Spring Boot und React, heute an KI-gestützten Datenpipelines und Anwendungen. Mein Schwerpunkt sind KI-Anwendungen mit LLMs, RAG und Agenten, die nachvollziehbar arbeiten und mit sensiblen Daten verantwortungsvoll umgehen.",
       "about.msc": "M.Sc. Informatik – Vertrauenswürdige Systeme", "about.mscWhere": "Hochschule Bremerhaven · laufend",
@@ -26,7 +26,7 @@
       "contact.when": "ab Datum · Werkstudent/Vollzeit · Region/remote", "contact.text2": "Am schnellsten erreichen Sie mich per E-Mail.",
       "footer.imprint": "Impressum",
       problem: "Problem", solution: "Lösung", result: "Ergebnis",
-      demo: "Live-Demo", github: "GitHub", missingLink: "Link ergänzen", verify: "Verifizieren",
+      demo: "Live-Demo", github: "GitHub", missingLink: "Link ergänzen", verify: "Verifizieren", courses: "Kurse", showCourses: "Alle {n} Kurse anzeigen",
       screens: "Screenshots", enlarge: "Bild vergrößern", featured: "Highlight", empty: "Keine Projekte in dieser Kategorie.",
       themeToDark: "Dunkles Design aktivieren", themeToLight: "Helles Design aktivieren", langSwitch: "Switch to English",
       menuOpen: "Menü öffnen", menuClose: "Menü schließen", close: "Schließen"
@@ -38,7 +38,7 @@
       "hero.lead": "I build web applications and AI systems from the database schema to the user interface, focusing on RAG, agentic AI and trustworthy, privacy-compliant systems.",
       "hero.cv": "Download CV", "hero.contact": "Contact", "hero.photo": "Add profile photo",
       "stats.users": "concurrent users in load test (Harbour2025)", "stats.aucValue": "0.957", "stats.auc": "ROC-AUC of ML model (MediFlow)",
-      "stats.sinceValue": "since 2023", "stats.since": "industry experience alongside studies", "stats.certs": "verifiable certificates",
+      "stats.sinceValue": "since 2023", "stats.since": "industry experience alongside studies", "stats.certs": "certificates from IBM, AWS and Meta",
       "about.h": "About me",
       "about.text": "I am studying for a master’s degree in Computer Science (Trustworthy Systems) at Bremerhaven University of Applied Sciences. Before that, I completed a B.Sc. in Computer Engineering at Bremen University of Applied Sciences, with a bachelor’s thesis graded 1.3 and funded by the Deutschlandstipendium scholarship. Since 2023 I have been working as a developer alongside my studies: first in full-stack development with Java/Spring Boot and React, now on AI-powered data pipelines and applications. My focus is on AI applications with LLMs, RAG and agents that work transparently and handle sensitive data responsibly.",
       "about.msc": "M.Sc. Computer Science – Trustworthy Systems", "about.mscWhere": "Bremerhaven University of Applied Sciences · ongoing",
@@ -51,7 +51,7 @@
       "contact.when": "from date · working student/full-time · region/remote", "contact.text2": "Email is the fastest way to reach me.",
       "footer.imprint": "Legal notice",
       problem: "Problem", solution: "Solution", result: "Result",
-      demo: "Live demo", github: "GitHub", missingLink: "add link", verify: "Verify",
+      demo: "Live demo", github: "GitHub", missingLink: "add link", verify: "Verify", courses: "courses", showCourses: "Show all {n} courses",
       screens: "Screenshots", enlarge: "Enlarge image", featured: "Highlight", empty: "No projects in this category.",
       themeToDark: "Enable dark theme", themeToLight: "Enable light theme", langSwitch: "Auf Deutsch umschalten",
       menuOpen: "Open menu", menuClose: "Close menu", close: "Close"
@@ -189,11 +189,19 @@
     document.getElementById("cert-list").innerHTML = C.certificates.map(function (c) {
       var initials = c.issuer.split(/[\s·]+/)[0].slice(0, 4);
       return (
-        '<li class="cert' + (c.highlight ? " is-highlight" : "") + '">' +
+        '<li class="cert' + (c.highlight ? " is-highlight" : "") + (c.courses ? " has-courses" : "") + '">' +
           '<span class="cert-logo ' + issuerClass(c.issuer) + '" aria-hidden="true">' + esc(initials) + "</span>" +
           '<div class="cert-text"><h3>' + esc(c.title) + "</h3>" +
-          "<p>" + esc(c.issuer) + (c.date ? " · " + esc(t(c.date)) : "") + "</p></div>" +
+          "<p>" + esc(c.issuer) + (c.date ? " · " + esc(t(c.date)) : "") + (c.courses ? " · " + c.courses.length + " " + esc(ui("courses")) : "") + "</p>" +
+          (c.note ? '<p class="cert-note">' + esc(t(c.note)) + "</p>" : "") + "</div>" +
           '<a class="link-btn" href="' + esc(c.url) + '" target="_blank" rel="noopener" aria-label="' + esc(ui("verify") + ": " + c.title) + '">' + esc(ui("verify")) + ext + "</a>" +
+          (c.courses
+            ? '<details class="cert-courses"><summary>' + esc(ui("showCourses").replace("{n}", c.courses.length)) + "</summary><ol>" +
+                c.courses.map(function (k) {
+                  return "<li><span>" + esc(k.title) + "</span>" +
+                    (k.url ? '<a href="' + esc(k.url) + '" target="_blank" rel="noopener" aria-label="' + esc(ui("verify") + ": " + k.title) + '">' + esc(ui("verify")) + ext + "</a>" : "") + "</li>";
+                }).join("") + "</ol></details>"
+            : "") +
         "</li>"
       );
     }).join("");
