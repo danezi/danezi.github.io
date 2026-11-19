@@ -283,9 +283,11 @@ a.link-btn:hover { border-color: var(--accent); background: var(--accent-soft); 
 .cat-ai { background: #ede9fe; color: #5b21b6; }
 .cat-fullstack { background: #dbeafe; color: #1e40af; }
 .cat-data { background: #ccfbf1; color: #115e59; }
+.cat-sim { background: #ffedd5; color: #9a3412; }
 [data-theme="dark"] .cat-ai { background: #2e1065; color: #c4b5fd; }
 [data-theme="dark"] .cat-fullstack { background: #172554; color: #93c5fd; }
 [data-theme="dark"] .cat-data { background: #042f2e; color: #5eead4; }
+[data-theme="dark"] .cat-sim { background: #431407; color: #fdba74; }
 .context { color: var(--text-muted); }
 .card h3 { font-size: 1.15rem; }
 .summary { color: var(--text-muted); font-size: .95rem; }

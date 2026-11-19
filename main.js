@@ -58,8 +58,8 @@
     }
   };
 
-  var CAT_LABEL = { ai: "KI/LLM", fullstack: "Full-Stack", data: "Data Science" };
-  var CAT_LABEL_EN = { ai: "AI/LLM", fullstack: "Full-Stack", data: "Data Science" };
+  var CAT_LABEL = { ai: "KI/LLM", fullstack: "Full-Stack", data: "Data Science", sim: "Simulation" };
+  var CAT_LABEL_EN = { ai: "AI/LLM", fullstack: "Full-Stack", data: "Data Science", sim: "Simulation" };
 
   var ICONS = {
     code: '<path d="M8 6l-6 6 6 6M16 6l6 6-6 6" />',

@@ -135,7 +135,7 @@ window.CONTENT = {
     },
     {
       id: "pyseidon",
-      cats: ["data"],
+      cats: ["data", "sim"],
       cover: "assets/img/covers/pyseidon.svg",
       screens: [
         { src: "assets/img/screens/pyseidon-simulation.jpg", alt: { de: "Screenshot: PySeidon-Simulation mit Schiffen, Schleppern und Lotsenbooten sowie Belegung von Ankerplätzen und Liegeplätzen", en: "Screenshot: PySeidon simulation with ships, tugs and pilot boats plus anchorage and berth occupancy" } }
