@@ -62,12 +62,10 @@
             <li>Java</li><li>Python</li><li>React</li><li>LLM</li><li>RAG</li><li>Agentic AI</li>
           </ul>
           <div class="hero-actions">
-            <!-- Lebenslauf-Button wieder aktivieren, sobald assets/cv/Lebenslauf_Zidane_Kenfack_Fouape.pdf existiert:
-            <a class="btn btn-primary" href="assets/cv/Lebenslauf_Zidane_Kenfack_Fouape.pdf" download>
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span data-i18n="hero.cv">Lebenslauf herunterladen</span>
+            <a class="btn btn-primary" href="assets/cv/Lebenslauf_Zidane_Kenfack_Fouape.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z M14 3v5h5 M9 13h6 M9 17h6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span data-i18n="hero.cv">Lebenslauf ansehen</span>
             </a>
-            -->
             <a class="btn btn-secondary" href="https://github.com/danezi" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
               GitHub
@@ -175,6 +173,7 @@
         <div>
           <p class="section-kicker">06</p>
           <h2 id="contact-h" data-i18n="contact.h">Kontakt</h2>        </div>
+        <div class="contact-side">
         <div class="contact-links">
           <a class="contact-item" href="mailto:danezikfz@gmail.com">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
@@ -188,6 +187,18 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
             <span>github.com/danezi</span>
           </a>
+        </div>
+        <div class="cv-card">
+          <img src="assets/img/qr-lebenslauf.svg" width="120" height="120" alt="QR-Code zum Lebenslauf (PDF)" data-i18n-alt="cv.qrAlt">
+          <div>
+            <strong data-i18n="cv.title">Lebenslauf (PDF)</strong>
+            <p data-i18n="cv.text">QR-Code scannen oder direkt öffnen.</p>
+            <div class="cv-actions">
+              <a class="cv-btn" href="assets/cv/Lebenslauf_Zidane_Kenfack_Fouape.pdf" target="_blank" rel="noopener" data-i18n="cv.open">Ansehen</a>
+              <a class="cv-btn" href="assets/cv/Lebenslauf_Zidane_Kenfack_Fouape.pdf" download data-i18n="cv.download">Herunterladen</a>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </section>

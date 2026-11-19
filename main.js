@@ -11,7 +11,7 @@
       "nav.about": "Über mich", "nav.projects": "Projekte", "nav.experience": "Erfahrung", "nav.skills": "Skills", "nav.certs": "Zertifikate", "nav.contact": "Kontakt",
       "hero.status": "Offen für Stellen als Full-Stack Developer & AI Engineer",
       "hero.lead": "Ich entwickle Webanwendungen und KI-Systeme vom Datenbankschema bis zur Oberfläche, mit Schwerpunkt auf RAG, Agentic AI und vertrauenswürdigen, datenschutzkonformen Systemen.",
-      "hero.cv": "Lebenslauf herunterladen", "hero.contact": "Kontakt", "hero.photo": "Profilfoto ergänzen",
+      "hero.cv": "Lebenslauf ansehen", "cv.title": "Lebenslauf (PDF)", "cv.text": "QR-Code scannen oder direkt öffnen.", "cv.open": "Ansehen", "cv.download": "Herunterladen", "cv.qrAlt": "QR-Code zum Lebenslauf (PDF)", "hero.contact": "Kontakt", "hero.photo": "Profilfoto ergänzen",
       "stats.users": "gleichzeitige Nutzer im Lasttest (Harbour2025)", "stats.aucValue": "0,957", "stats.auc": "ROC-AUC im ML-Modell (MediFlow)",
       "stats.sinceValue": "seit 2023", "stats.since": "Berufserfahrung neben dem Studium", "stats.certs": "Zertifikate von IBM, AWS und Meta",
       "about.h": "Über mich",
@@ -36,7 +36,7 @@
       "nav.about": "About", "nav.projects": "Projects", "nav.experience": "Experience", "nav.skills": "Skills", "nav.certs": "Certificates", "nav.contact": "Contact",
       "hero.status": "Open to roles as Full-Stack Developer & AI Engineer",
       "hero.lead": "I build web applications and AI systems from the database schema to the user interface, focusing on RAG, agentic AI and trustworthy, privacy-compliant systems.",
-      "hero.cv": "Download CV", "hero.contact": "Contact", "hero.photo": "Add profile photo",
+      "hero.cv": "View CV", "cv.title": "CV (PDF, German)", "cv.text": "Scan the QR code or open it directly.", "cv.open": "View", "cv.download": "Download", "cv.qrAlt": "QR code linking to the CV (PDF)", "hero.contact": "Contact", "hero.photo": "Add profile photo",
       "stats.users": "concurrent users in load test (Harbour2025)", "stats.aucValue": "0.957", "stats.auc": "ROC-AUC of ML model (MediFlow)",
       "stats.sinceValue": "since 2023", "stats.since": "industry experience alongside studies", "stats.certs": "certificates from IBM, AWS and Meta",
       "about.h": "About me",
@@ -213,6 +213,10 @@
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var key = el.getAttribute("data-i18n");
       if (UI[lang][key] != null) el.textContent = UI[lang][key];
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-alt");
+      if (UI[lang][key] != null) el.alt = UI[lang][key];
     });
     var lt = document.getElementById("lang-toggle");
     lt.querySelector("[data-lang-label]").textContent = lang === "de" ? "EN" : "DE";

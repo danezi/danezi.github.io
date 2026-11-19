@@ -392,6 +392,18 @@ a.link-btn:hover { border-color: var(--accent); background: var(--accent-soft); 
 .contact-item svg { flex: none; width: 22px; height: 22px; }
 .contact-item:focus-visible { outline-color: #fff; }
 @media (min-width: 860px) { .contact-box { grid-template-columns: 1.3fr 1fr; padding: 56px; } }
+.contact-side { display: grid; gap: 14px; align-content: center; }
+.cv-card {
+  display: flex; gap: 16px; align-items: center; padding: 14px; border-radius: 14px;
+  background: rgb(255 255 255 / .12); border: 1px solid rgb(255 255 255 / .22);
+}
+.cv-card img { flex: none; width: 112px; height: 112px; border-radius: 10px; background: #fff; padding: 6px; }
+.cv-card strong { display: block; color: #fff; }
+.cv-card p { color: #dbeafe; font-size: .9rem; margin-top: 2px; }
+.cv-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.cv-btn { padding: 6px 12px; border-radius: 10px; background: #fff; color: #1e3a8a; font-weight: 650; font-size: .85rem; text-decoration: none; }
+.cv-btn:hover { background: #dbeafe; }
+.cv-btn:focus-visible { outline-color: #fff; }
 @media (max-width: 859px) { .contact-box { padding-inline: 20px; } }
 
 .site-footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--text-muted); font-size: .9rem; }
