@@ -137,7 +137,9 @@ window.CONTENT = {
       id: "pyseidon",
       cats: ["data"],
       cover: "assets/img/covers/pyseidon.svg",
-      screens: [],
+      screens: [
+        { src: "assets/img/screens/pyseidon-simulation.jpg", alt: { de: "Screenshot: PySeidon-Simulation mit Schiffen, Schleppern und Lotsenbooten sowie Belegung von Ankerplätzen und Liegeplätzen", en: "Screenshot: PySeidon simulation with ships, tugs and pilot boats plus anchorage and berth occupancy" } }
+      ],
       context: { de: "Masterprojekt · 10 Studierende · HS Bremerhaven", en: "Master’s project · 10 students · Bremerhaven University" },
       title: { de: "PySeidon + SUMO – digitaler Zwilling des RoRo-Terminals Bremerhaven", en: "PySeidon + SUMO – digital twin of the Bremerhaven RoRo terminal" },
       summary: {

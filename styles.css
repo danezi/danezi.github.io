@@ -397,6 +397,8 @@ a.link-btn:hover { border-color: var(--accent); background: var(--accent-soft); 
   display: flex; gap: 16px; align-items: center; padding: 14px; border-radius: 14px;
   background: rgb(255 255 255 / .12); border: 1px solid rgb(255 255 255 / .22);
 }
+.cv-qr { flex: none; display: block; border-radius: 10px; cursor: zoom-in; }
+.cv-qr:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 .cv-card img { flex: none; width: 112px; height: 112px; border-radius: 10px; background: #fff; padding: 6px; }
 .cv-card strong { display: block; color: #fff; }
 .cv-card p { color: #dbeafe; font-size: .9rem; margin-top: 2px; }
