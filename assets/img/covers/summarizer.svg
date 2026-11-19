@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Illustration: Langer Dialog wird zu einer kurzen Zusammenfassung">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1a33"/><stop offset="1" stop-color="#312e81"/></linearGradient></defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- dialog bubbles -->
+  <g>
+    <rect x="60" y="60" width="220" height="50" rx="14" fill="#1e40af"/><rect x="80" y="80" width="170" height="9" rx="4.5" fill="#bfdbfe"/>
+    <rect x="110" y="125" width="220" height="50" rx="14" fill="#0f2547" stroke="#3b82f6" stroke-opacity=".5"/><rect x="130" y="145" width="140" height="9" rx="4.5" fill="#94a3b8"/>
+    <rect x="60" y="190" width="220" height="50" rx="14" fill="#1e40af"/><rect x="80" y="210" width="120" height="9" rx="4.5" fill="#bfdbfe"/>
+    <rect x="110" y="255" width="220" height="50" rx="14" fill="#0f2547" stroke="#3b82f6" stroke-opacity=".5"/><rect x="130" y="275" width="170" height="9" rx="4.5" fill="#94a3b8"/>
+    <rect x="60" y="320" width="220" height="50" rx="14" fill="#1e40af"/><rect x="80" y="340" width="150" height="9" rx="4.5" fill="#bfdbfe"/>
+  </g>
+  <!-- model block -->
+  <g transform="translate(420 215)">
+    <rect x="-55" y="-55" width="110" height="110" rx="22" fill="#2563eb"/>
+    <g stroke="#bfdbfe" stroke-width="3" fill="#bfdbfe"><circle cx="-22" cy="-22" r="7"/><circle cx="22" cy="-22" r="7"/><circle cx="-22" cy="22" r="7"/><circle cx="22" cy="22" r="7"/><circle r="9"/><line x1="-22" y1="-22" x2="0" y2="0"/><line x1="22" y1="-22" x2="0" y2="0"/><line x1="-22" y1="22" x2="0" y2="0"/><line x1="22" y1="22" x2="0" y2="0"/></g>
+  </g>
+  <path d="M340 215h20M480 215h40" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+  <!-- summary card -->
+  <rect x="535" y="150" width="210" height="130" rx="16" fill="#f8fafc"/>
+  <rect x="555" y="172" width="80" height="12" rx="6" fill="#2563eb"/>
+  <rect x="555" y="200" width="170" height="9" rx="4.5" fill="#94a3b8"/><rect x="555" y="220" width="150" height="9" rx="4.5" fill="#94a3b8"/><rect x="555" y="240" width="110" height="9" rx="4.5" fill="#94a3b8"/>
+  <!-- score bars -->
+  <rect x="575" y="305" width="130" height="40" rx="20" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+  <text x="640" y="332" text-anchor="middle" fill="#e0f2fe" font-family="ui-monospace,monospace" font-size="18">ROUGE</text>
+</svg>

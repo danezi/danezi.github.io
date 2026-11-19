@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Illustration: Gesichtsbild mit Heatmap zur Deepfake-Erkennung">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1a33"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient>
+    <radialGradient id="heat" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f87171" stop-opacity=".85"/><stop offset=".5" stop-color="#facc15" stop-opacity=".45"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- image frame with face -->
+  <rect x="80" y="70" width="280" height="310" rx="16" fill="#0f2547" stroke="#3b82f6" stroke-opacity=".5"/>
+  <g transform="translate(220 220)">
+    <ellipse rx="80" ry="100" fill="#93c5fd" opacity=".25"/>
+    <ellipse rx="80" ry="100" fill="none" stroke="#93c5fd" stroke-width="3"/>
+    <circle cx="-28" cy="-20" r="9" fill="#e0f2fe"/><circle cx="28" cy="-20" r="9" fill="#e0f2fe"/>
+    <path d="M0 -5v28" stroke="#e0f2fe" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-26 45q26 18 52 0" stroke="#e0f2fe" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <ellipse cx="22" cy="-15" rx="55" ry="45" fill="url(#heat)"/>
+    <ellipse cx="0" cy="48" rx="45" ry="28" fill="url(#heat)" opacity=".7"/>
+  </g>
+  <!-- scan corners -->
+  <g stroke="#38bdf8" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M110 100h30M110 100v30"/><path d="M330 100h-30M330 100v30"/><path d="M110 350h30M110 350v-30"/><path d="M330 350h-30M330 350v-30"/>
+  </g>
+  <!-- model comparison -->
+  <g font-family="system-ui,sans-serif" font-size="18" font-weight="600">
+    <rect x="430" y="95" width="300" height="70" rx="14" fill="#0f2547" stroke="#3b82f6" stroke-opacity=".5"/>
+    <text x="455" y="137" fill="#e0f2fe">CNN</text><g fill="#38bdf8" opacity=".8"><rect x="560" y="114" width="22" height="32" rx="3"/><rect x="592" y="119" width="18" height="22" rx="3"/><rect x="620" y="123" width="14" height="14" rx="3"/><rect x="644" y="126" width="10" height="8" rx="2"/></g>
+    <rect x="430" y="190" width="300" height="70" rx="14" fill="#0f2547" stroke="#3b82f6" stroke-opacity=".5"/>
+    <text x="455" y="232" fill="#e0f2fe">ViT</text><g fill="#38bdf8" opacity=".8"><rect x="560" y="214" width="20" height="20" rx="3"/><rect x="588" y="214" width="20" height="20" rx="3"/><rect x="616" y="214" width="20" height="20" rx="3"/><rect x="644" y="214" width="20" height="20" rx="3"/><rect x="672" y="214" width="20" height="20" rx="3"/></g>
+    <rect x="430" y="285" width="300" height="70" rx="14" fill="#0f2547" stroke="#3b82f6" stroke-opacity=".5"/>
+    <text x="455" y="327" fill="#e0f2fe">XAI</text>
+    <g transform="translate(560 320)"><rect x="-10" y="-14" width="34" height="28" rx="4" fill="#f87171" opacity=".8"/><rect x="34" y="-14" width="34" height="28" rx="4" fill="#facc15" opacity=".8"/><rect x="78" y="-14" width="34" height="28" rx="4" fill="#38bdf8" opacity=".8"/></g>
+  </g>
+</svg>

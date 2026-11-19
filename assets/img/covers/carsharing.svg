@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Illustration: Buchungsoberfläche einer Car-Sharing-App">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1a33"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- browser window -->
+  <rect x="70" y="60" width="460" height="330" rx="14" fill="#0f2547" stroke="#3b82f6" stroke-opacity=".5"/>
+  <path d="M70 74a14 14 0 0 1 14-14h432a14 14 0 0 1 14 14v22H70z" fill="#1e3a8a"/>
+  <circle cx="92" cy="78" r="5" fill="#f87171"/><circle cx="110" cy="78" r="5" fill="#facc15"/><circle cx="128" cy="78" r="5" fill="#4ade80"/>
+  <!-- calendar grid -->
+  <g transform="translate(95 120)" fill="#1e3a8a">
+    <rect width="40" height="34" rx="6"/><rect x="48" width="40" height="34" rx="6"/><rect x="96" width="40" height="34" rx="6" fill="#2563eb"/><rect x="144" width="40" height="34" rx="6" fill="#2563eb"/><rect x="192" width="40" height="34" rx="6"/>
+    <rect y="42" width="40" height="34" rx="6"/><rect x="48" y="42" width="40" height="34" rx="6"/><rect x="96" y="42" width="40" height="34" rx="6"/><rect x="144" y="42" width="40" height="34" rx="6"/><rect x="192" y="42" width="40" height="34" rx="6"/>
+    <rect y="84" width="40" height="34" rx="6"/><rect x="48" y="84" width="40" height="34" rx="6"/><rect x="96" y="84" width="40" height="34" rx="6"/><rect x="144" y="84" width="40" height="34" rx="6"/><rect x="192" y="84" width="40" height="34" rx="6"/>
+  </g>
+  <rect x="95" y="275" width="232" height="44" rx="10" fill="#38bdf8"/><rect x="160" y="292" width="100" height="10" rx="5" fill="#0b1a33"/>
+  <!-- car card -->
+  <rect x="350" y="120" width="160" height="200" rx="12" fill="#1e3a8a"/>
+  <g transform="translate(430 190)"><path d="M-55 10l12-26c3-6 8-9 15-9h56c7 0 12 3 15 9l12 26v24h-110z" fill="#93c5fd"/><rect x="-40" y="-10" width="80" height="18" rx="4" fill="#0f2547"/><circle cx="-32" cy="36" r="11" fill="#0f172a" stroke="#e0f2fe" stroke-width="3"/><circle cx="32" cy="36" r="11" fill="#0f172a" stroke="#e0f2fe" stroke-width="3"/></g>
+  <rect x="370" y="260" width="90" height="10" rx="5" fill="#bfdbfe"/><rect x="370" y="280" width="60" height="10" rx="5" fill="#bfdbfe" opacity=".6"/>
+  <!-- API layers -->
+  <g font-family="ui-monospace,monospace" font-size="18" fill="#e0f2fe">
+    <rect x="580" y="110" width="160" height="54" rx="12" fill="#2563eb"/><text x="660" y="143" text-anchor="middle">React</text>
+    <rect x="580" y="198" width="160" height="54" rx="12" fill="#1e40af"/><text x="660" y="231" text-anchor="middle">REST API</text>
+    <rect x="580" y="286" width="160" height="54" rx="12" fill="#1e3a8a"/><text x="660" y="319" text-anchor="middle">Spring Boot</text>
+  </g>
+  <path d="M660 164v34M660 252v34" stroke="#38bdf8" stroke-width="3"/>
+</svg>

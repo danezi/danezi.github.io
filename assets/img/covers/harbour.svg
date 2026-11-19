@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Illustration: 3D-Karte mit Points of Interest">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1a33"/><stop offset="1" stop-color="#123a7a"/></linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d4ed8" stop-opacity=".55"/><stop offset="1" stop-color="#0ea5e9" stop-opacity=".25"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- isometric map plane -->
+  <g transform="translate(400 250)">
+    <polygon points="0,-150 300,0 0,150 -300,0" fill="#0f2a55" stroke="#3b82f6" stroke-opacity=".5"/>
+    <polygon points="60,-120 300,0 120,90 -60,0" fill="url(#sea)"/>
+    <g stroke="#60a5fa" stroke-opacity=".18">
+      <line x1="-240" y1="-30" x2="60" y2="120"/><line x1="-180" y1="-60" x2="120" y2="90"/><line x1="-120" y1="-90" x2="180" y2="60"/><line x1="-60" y1="-120" x2="240" y2="30"/>
+      <line x1="-240" y1="30" x2="60" y2="-120"/><line x1="-180" y1="60" x2="120" y2="-90"/><line x1="-120" y1="90" x2="180" y2="-60"/><line x1="-60" y1="120" x2="240" y2="-30"/>
+    </g>
+    <!-- buildings -->
+    <g>
+      <polygon points="-150,0 -120,-15 -90,0 -120,15" fill="#93c5fd"/><polygon points="-150,0 -120,15 -120,-45 -150,-60" fill="#3b82f6"/><polygon points="-90,0 -120,15 -120,-45 -90,-60" fill="#2563eb"/><polygon points="-150,-60 -120,-75 -90,-60 -120,-45" fill="#bfdbfe"/>
+      <polygon points="-80,40 -55,28 -30,40 -55,52" fill="#93c5fd"/><polygon points="-80,40 -55,52 -55,12 -80,0" fill="#3b82f6"/><polygon points="-30,40 -55,52 -55,12 -30,0" fill="#2563eb"/><polygon points="-80,0 -55,-12 -30,0 -55,12" fill="#bfdbfe"/>
+      <polygon points="-40,-60 -15,-72 10,-60 -15,-48" fill="#93c5fd"/><polygon points="-40,-60 -15,-48 -15,-118 -40,-130" fill="#3b82f6"/><polygon points="10,-60 -15,-48 -15,-118 10,-130" fill="#2563eb"/><polygon points="-40,-130 -15,-142 10,-130 -15,-118" fill="#bfdbfe"/>
+    </g>
+  </g>
+  <!-- POI pins -->
+  <g fill="#f8fafc">
+    <g transform="translate(250 205)"><path d="M0 0c-14 0-24 10-24 23 0 17 24 37 24 37s24-20 24-37C24 10 14 0 0 0z" fill="#38bdf8"/><circle cy="22" r="8" fill="#0b1a33"/></g>
+    <g transform="translate(520 170)"><path d="M0 0c-14 0-24 10-24 23 0 17 24 37 24 37s24-20 24-37C24 10 14 0 0 0z" fill="#38bdf8"/><circle cy="22" r="8" fill="#0b1a33"/></g>
+    <g transform="translate(430 290)"><path d="M0 0c-14 0-24 10-24 23 0 17 24 37 24 37s24-20 24-37C24 10 14 0 0 0z" fill="#facc15"/><circle cy="22" r="8" fill="#0b1a33"/></g>
+  </g>
+  <!-- realtime sync waves -->
+  <g fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round">
+    <path d="M640 70a30 30 0 0 1 0 42" opacity=".9"/><path d="M655 55a52 52 0 0 1 0 72" opacity=".6"/><path d="M670 40a74 74 0 0 1 0 102" opacity=".3"/>
+  </g>
+  <circle cx="625" cy="91" r="9" fill="#38bdf8"/>
+</svg>
