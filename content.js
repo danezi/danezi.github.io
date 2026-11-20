@@ -126,10 +126,10 @@ window.CONTENT = {
         en: "Pipeline of form-field segmentation, handwriting recognition and structured storage in a database. For data-protection reasons we built our own models instead of using external services: careful model selection and fine-tuning."
       },
       result: {
-        de: "Zum Semesterende eine Erkennungsgenauigkeit von 85 %.",
-        en: "Recognition accuracy of 85% by the end of the semester."
+        de: "Zum Semesterende eine Erkennungsgenauigkeit von 95 %.",
+        en: "Recognition accuracy of 95% by the end of the semester."
       },
-      metric: { value: "85 %", valueEn: "85%", label: { de: "Erkennungsgenauigkeit", en: "recognition accuracy" } },
+      metric: { value: "95 %", valueEn: "95%", label: { de: "Erkennungsgenauigkeit", en: "recognition accuracy" } },
       tech: ["Segmentierung", "Handschrifterkennung", "Fine-Tuning", { de: "Datenbank", en: "Database" }, { de: "Datenschutz", en: "Data protection" }],
       links: []
     },
@@ -298,14 +298,14 @@ window.CONTENT = {
       url: "https://coursera.org/verify/professional-cert/9GM23QDYTAHH", highlight: true,
       // 10 Kurszertifikate; Verify-Link je Kurs ergänzen, sobald bekannt (url: "https://coursera.org/verify/...")
       courses: [
-        { title: "Develop Generative AI Applications: Get Started" },
-        { title: "Build RAG Applications: Get Started" },
-        { title: "Vector Databases for RAG: An Introduction" },
-        { title: "Advanced RAG with Vector Databases and Retrievers" },
+        { title: "Develop Generative AI Applications: Get Started", url: "https://coursera.org/verify/8YFCHVKIHUS4" },
+        { title: "Build RAG Applications: Get Started", url: "https://coursera.org/verify/6AHPS6E6FOQS" },
+        { title: "Vector Databases for RAG: An Introduction", url: "https://coursera.org/verify/NWX4R26TL5C7" },
+        { title: "Advanced RAG with Vector Databases and Retrievers", url: "https://coursera.org/verify/T0EKVIX16AJ0" },
         { title: "Build Multimodal Generative AI Applications" },
         { title: "Fundamentals of Building AI Agents", url: "https://coursera.org/verify/8AOD0EJJ8ZHD" },
-        { title: "Agentic AI with LangChain and LangGraph" },
-        { title: "Agentic AI with LangGraph, CrewAI, AutoGen and BeeAI" },
+        { title: "Agentic AI with LangChain and LangGraph", url: "https://coursera.org/verify/WTR6KQI1Y6RR" },
+        { title: "Agentic AI with LangGraph, CrewAI, AutoGen and BeeAI", url: "https://coursera.org/verify/8N7IS64Y8RCJ" },
         { title: "Build AI Agents using MCP" },
         { title: "RAG and Agentic AI Capstone Project" }
       ]
