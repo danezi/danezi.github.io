@@ -242,7 +242,7 @@ window.CONTENT = {
   experience: [
     {
       from: "01/2026", to: { de: "heute", en: "present" },
-      company: "Beezubi Lernwelt GmbH", initials: "BZ",
+      company: "Beezubi Lernwelt GmbH", initials: "BZ", logo: "assets/img/logos/beezubi.png",
       role: { de: "Werkstudent Softwareentwicklung, Data Science & KI", en: "Working student – software development, data science & AI" },
       points: {
         de: [
@@ -266,7 +266,7 @@ window.CONTENT = {
     },
     {
       from: "01/2023", to: { de: "12/2025", en: "12/2025" },
-      company: "spectromat Massenspektrometer GmbH", initials: "SP",
+      company: "spectromat Massenspektrometer GmbH", initials: "SP", logo: "assets/img/logos/spectromat.png",
       role: { de: "Werkstudent Full-Stack Developer, F&E", en: "Working student – full-stack developer, R&D" },
       points: {
         de: [
@@ -286,7 +286,7 @@ window.CONTENT = {
     },
     {
       from: "09/2024", to: { de: "02/2025", en: "02/2025" },
-      company: "spectromat Massenspektrometer GmbH", initials: "SP",
+      company: "spectromat Massenspektrometer GmbH", initials: "SP", logo: "assets/img/logos/spectromat.png",
       role: { de: "Praktikum Firmware-Entwicklung", en: "Internship – firmware development" },
       points: {
         de: ["Firmware für PIC-Mikrocontroller in C", "CAN-Bus-Kommunikation, Firmware-Tests und Dokumentation"],
@@ -296,7 +296,7 @@ window.CONTENT = {
     },
     {
       from: "12/2021", to: { de: "09/2022", en: "09/2022" },
-      company: "Hochschule Bremen", initials: "HSB",
+      company: "Hochschule Bremen", initials: "HSB", logo: "assets/img/logos/hs-bremen.png",
       role: { de: "Studentische Hilfskraft IT – PC-Hybridlehre", en: "Student assistant IT – hybrid teaching PCs" },
       points: {
         de: ["Unterstützung bei Wartung und Pflege der PC-Infrastruktur für die Hybridlehre", "IT-Support und Schulungsmaterialien für Medientechnik-Systeme"],
@@ -309,7 +309,7 @@ window.CONTENT = {
   // Wörtliche Zitate aus Arbeitszeugnissen (nicht umformulieren)
   testimonials: [
     {
-      company: "Beezubi Lernwelt GmbH", initials: "BZ",
+      company: "Beezubi Lernwelt GmbH", initials: "BZ", logo: "assets/img/logos/beezubi.png",
       source: { de: "Zwischenzeugnis · August 2026", en: "Interim reference · August 2026" },
       quotes: {
         de: [
@@ -323,7 +323,7 @@ window.CONTENT = {
       }
     },
     {
-      company: "spectromat Massenspektrometer GmbH", initials: "SP",
+      company: "spectromat Massenspektrometer GmbH", initials: "SP", logo: "assets/img/logos/spectromat.png",
       source: { de: "Arbeitszeugnis · Januar 2026", en: "Employment reference · January 2026" },
       quotes: {
         de: [

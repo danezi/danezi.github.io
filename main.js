@@ -154,7 +154,7 @@
     document.getElementById("timeline").innerHTML = C.experience.map(function (e, i) {
       return (
         '<li class="tl-item' + (i === 0 ? " is-current" : "") + '">' +
-          '<div class="tl-badge" aria-hidden="true">' + esc(e.initials) + "</div>" +
+          '<div class="tl-badge' + (e.logo ? " has-logo" : "") + '" aria-hidden="true">' + (e.logo ? '<img src="' + esc(e.logo) + '" alt="" width="44" height="44">' : esc(e.initials)) + "</div>" +
           '<div class="tl-card">' +
             '<p class="tl-date">' + esc(e.from) + " – " + esc(t(e.to)) + "</p>" +
             "<h3>" + esc(t(e.role)) + "</h3>" +
@@ -177,7 +177,7 @@
           '<svg class="ref-mark" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M13 8C7.5 9.6 4 13.8 4 19.5 4 23 6.2 25 9 25c2.6 0 4.5-1.9 4.5-4.4 0-2.4-1.7-4.1-4-4.1-.5 0-.9 0-1.2.1.6-2.8 2.7-5 5.7-6.2zm15 0c-5.5 1.6-9 5.8-9 11.5 0 3.5 2.2 5.5 5 5.5 2.6 0 4.5-1.9 4.5-4.4 0-2.4-1.7-4.1-4-4.1-.5 0-.9 0-1.2.1.6-2.8 2.7-5 5.7-6.2z"/></svg>' +
           "<blockquote>" + t(r.quotes).map(function (q) { return "<p>" + esc(ui("qOpen") + q + ui("qClose")) + "</p>"; }).join("") + "</blockquote>" +
           (lang === "en" ? '<p class="ref-note">' + esc(ui("refTranslated")) + "</p>" : "") +
-          '<figcaption><span class="ref-logo" aria-hidden="true">' + esc(r.initials) + "</span>" +
+          '<figcaption><span class="ref-logo' + (r.logo ? " has-logo" : "") + '" aria-hidden="true">' + (r.logo ? '<img src="' + esc(r.logo) + '" alt="" width="42" height="42">' : esc(r.initials)) + "</span>" +
             "<span><strong>" + esc(r.company) + "</strong><span>" + esc(t(r.source)) + "</span></span></figcaption>" +
         "</figure>"
       );
