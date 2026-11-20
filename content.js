@@ -245,40 +245,96 @@ window.CONTENT = {
       company: "Beezubi Lernwelt GmbH", initials: "BZ",
       role: { de: "Werkstudent Softwareentwicklung, Data Science & KI", en: "Working student – software development, data science & AI" },
       points: {
-        de: ["KI-gestützte Datenpipelines in Python, die Lehrmaterialien mittels LLMs in strukturierte Datenformate überführen", "Mehrsprachige Übersetzungs-Pipeline für Ausbildungsinhalte mit automatisierter Qualitätssicherung", "Weiterentwicklung der Beezubi-App (React Native, Supabase/PostgreSQL)", "Neuimplementierung und Deployment von beezubi.de, inkl. datengetriebenem Template-System zur automatisierten Generierung von Inhalten"],
-        en: ["AI-powered Python data pipelines converting teaching material into structured data formats using LLMs", "Multilingual translation pipeline for training content with automated quality assurance", "Further development of the Beezubi app (React Native, Supabase/PostgreSQL)", "Rebuild and deployment of beezubi.de, including a data-driven template system for automated content generation"]
+        de: [
+          "KI-gestützte Datenpipelines in Python, die PDF-Lehrmaterialien mithilfe von LLM-APIs (u. a. GPT-4/5, Claude) automatisiert in strukturierte CSV-Daten überführen",
+          "Mehrsprachige Übersetzungs-Pipeline für Ausbildungsinhalte in mehr als sieben Sprachen, inkl. automatisierter Qualitätssicherung",
+          "Vollständige Neuimplementierung der Unternehmenswebsite [beezubi.de](https://www.beezubi.de/) von der Konzeption bis zum produktiven Betrieb",
+          "Datengetriebenes Template-System, das Berufsseiten automatisiert aus CSV-/XLSX-Datenquellen generiert",
+          "Automatisierung wiederkehrender Arbeitsabläufe zur Effizienzsteigerung",
+          "Weiterentwicklung der Lern-App (React Native, Supabase/PostgreSQL)"
+        ],
+        en: [
+          "AI-powered Python data pipelines that automatically convert PDF teaching material into structured CSV data using LLM APIs (incl. GPT-4/5, Claude)",
+          "Multilingual translation pipeline for training content in more than seven languages, including automated quality assurance",
+          "Complete rebuild of the company website [beezubi.de](https://www.beezubi.de/), from concept to production",
+          "Data-driven template system that automatically generates occupation pages from CSV/XLSX data sources",
+          "Automation of recurring workflows to increase efficiency",
+          "Further development of the learning app (React Native, Supabase/PostgreSQL)"
+        ]
       },
-      tech: ["LLMs", "Python", "React Native", "Supabase"]
+      tech: ["Python", "LLM-APIs", "Automation", "React Native", "Supabase"]
     },
     {
       from: "01/2023", to: { de: "12/2025", en: "12/2025" },
-      company: "Spectromat Massenspektrometer GmbH", initials: "SP",
-      role: { de: "Werkstudent Full-Stack Developer", en: "Working student – full-stack developer" },
+      company: "spectromat Massenspektrometer GmbH", initials: "SP",
+      role: { de: "Werkstudent Full-Stack Developer, F&E", en: "Working student – full-stack developer, R&D" },
       points: {
-        de: ["Java/Spring-Boot-Anwendungen und REST-APIs im Produktivbetrieb, Frontend mit React, agile Zusammenarbeit nach Scrum", "Weiterentwicklung des internen Bauteil-Verwaltungssystems: Ablege-, Reservierungs- und Rückgabeprozesse für Messgerätekomponenten, automatische Bestandsaktualisierung und bessere Nachverfolgbarkeit", "Datenbankmodellierung mit PostgreSQL, Docker-basierte Deployments, CI/CD mit GitHub Actions"],
-        en: ["Java/Spring Boot applications and REST APIs in production, React frontend, agile teamwork with Scrum", "Extended the internal component management system: storage, reservation and return processes for instrument components, automatic stock updates and better traceability", "Database modelling with PostgreSQL, Docker-based deployments, CI/CD with GitHub Actions"]
+        de: [
+          "Java/Spring-Boot-Anwendungen und REST-APIs im Produktivbetrieb, Frontend mit React, agile Zusammenarbeit nach Scrum",
+          "Weiterentwicklung des internen Bauteil-Verwaltungssystems: Ablege-, Reservierungs- und Rückgabeprozesse für Messgerätekomponenten, automatische Bestandsaktualisierung und bessere Nachverfolgbarkeit",
+          "Datenbankmodellierung mit PostgreSQL, Docker-basierte Deployments, CI/CD mit GitHub Actions",
+          "Hardwarenahe Entwicklung: PIC-Mikrocontroller in C und FPGA-Entwicklung"
+        ],
+        en: [
+          "Java/Spring Boot applications and REST APIs in production, React frontend, agile teamwork with Scrum",
+          "Extended the internal component management system: storage, reservation and return processes for instrument components, automatic stock updates and better traceability",
+          "Database modelling with PostgreSQL, Docker-based deployments, CI/CD with GitHub Actions",
+          "Hardware-related development: PIC microcontrollers in C and FPGA development"
+        ]
       },
-      tech: ["Java", "Spring Boot", "React", "PostgreSQL", "Docker", "GitHub Actions"]
+      tech: ["Java", "Spring Boot", "React", "PostgreSQL", "Docker", "GitHub Actions", "FPGA"]
     },
     {
       from: "09/2024", to: { de: "02/2025", en: "02/2025" },
-      company: "Spectromat Massenspektrometer GmbH", initials: "SP",
+      company: "spectromat Massenspektrometer GmbH", initials: "SP",
       role: { de: "Praktikum Firmware-Entwicklung", en: "Internship – firmware development" },
       points: {
-        de: ["Firmware für PIC-Mikrocontroller in C", "CAN-Bus-Kommunikation und Tests"],
-        en: ["Firmware for PIC microcontrollers in C", "CAN bus communication and testing"]
+        de: ["Firmware für PIC-Mikrocontroller in C", "CAN-Bus-Kommunikation, Firmware-Tests und Dokumentation"],
+        en: ["Firmware for PIC microcontrollers in C", "CAN bus communication, firmware testing and documentation"]
       },
       tech: ["C", "PIC", "CAN-Bus"]
     },
     {
-      from: "11/2021", to: { de: "11/2022", en: "11/2022" },
+      from: "12/2021", to: { de: "09/2022", en: "09/2022" },
       company: "Hochschule Bremen", initials: "HSB",
-      role: { de: "Werkstudent IT", en: "Working student – IT" },
+      role: { de: "Studentische Hilfskraft IT – PC-Hybridlehre", en: "Student assistant IT – hybrid teaching PCs" },
       points: {
-        de: ["IT-Support und Dokumentation für 5.000+ Studierende", "Technische Schulungsmaterialien für Medientechnik-Systeme"],
-        en: ["IT support and documentation for 5,000+ students", "Technical training material for media technology systems"]
+        de: ["Unterstützung bei Wartung und Pflege der PC-Infrastruktur für die Hybridlehre", "IT-Support und Schulungsmaterialien für Medientechnik-Systeme"],
+        en: ["Support with maintenance and upkeep of the PC infrastructure for hybrid teaching", "IT support and training material for media technology systems"]
       },
-      tech: ["IT-Support"]
+      tech: ["IT-Support", { de: "Medientechnik", en: "Media technology" }]
+    }
+  ],
+
+  // Wörtliche Zitate aus Arbeitszeugnissen (nicht umformulieren)
+  testimonials: [
+    {
+      company: "Beezubi Lernwelt GmbH", initials: "BZ",
+      source: { de: "Zwischenzeugnis · August 2026", en: "Interim reference · August 2026" },
+      quotes: {
+        de: [
+          "Er arbeitet sich selbstständig und zügig in neue Themen- und Aufgabengebiete ein und entwickelt dabei durchdachte und praxistaugliche Lösungen.",
+          "Die ihm übertragenen Aufgaben erledigt er stets zu unserer vollen Zufriedenheit."
+        ],
+        en: [
+          "He familiarises himself with new topics and tasks independently and quickly, developing well-thought-out and practical solutions.",
+          "He always completes the tasks assigned to him to our full satisfaction."
+        ]
+      }
+    },
+    {
+      company: "spectromat Massenspektrometer GmbH", initials: "SP",
+      source: { de: "Arbeitszeugnis · Januar 2026", en: "Employment reference · January 2026" },
+      quotes: {
+        de: [
+          "Mit seinem umfangreichen und äußerst fundierten Fachwissen erzielte er stets sehr gute Erfolge.",
+          "Sein Verhalten gegenüber Vorgesetzten, Kollegen und Kunden war stets vorbildlich."
+        ],
+        en: [
+          "With his extensive and exceptionally sound expertise, he always achieved very good results.",
+          "His conduct towards superiors, colleagues and customers was always exemplary."
+        ]
+      }
     }
   ],
 

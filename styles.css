@@ -112,7 +112,7 @@ mark.ph::after, .ph::after { content: " ⟧"; opacity: .6; }
 .icon-sun { display: none; }
 [data-theme="dark"] .icon-sun { display: block; }
 [data-theme="dark"] .icon-moon { display: none; }
-@media (min-width: 960px) {
+@media (min-width: 1100px) {
   .nav-toggle { display: none; }
   .nav-links { display: flex; gap: 2px; }
   .nav-links a { padding: 8px 10px; }
@@ -181,7 +181,7 @@ a.link-btn:hover { border-color: var(--accent); background: var(--accent-soft); 
   box-shadow: var(--shadow);
 }
 .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgb(34 197 94 / .18); }
-.hero h1 { margin-top: 18px; font-size: clamp(2.3rem, 1.6rem + 3.2vw, 3.8rem); font-weight: 800; letter-spacing: -.03em; }
+.hero h1 { margin-top: 0; font-size: clamp(2.3rem, 1.6rem + 3.2vw, 3.8rem); font-weight: 800; letter-spacing: -.03em; }
 .hero-title {
   margin-top: 8px; font-size: clamp(1.1rem, 1rem + .6vw, 1.4rem); font-weight: 650;
   background: linear-gradient(90deg, var(--accent), #0ea5e9); -webkit-background-clip: text; background-clip: text; color: transparent;
@@ -333,6 +333,28 @@ a.link-btn:hover { border-color: var(--accent); background: var(--accent-soft); 
 .tl-card > ul:not(.tags) { margin: 12px 0 14px 18px; color: var(--text-muted); font-size: .95rem; }
 .tl-card > ul:not(.tags) li { margin-bottom: 4px; }
 @media (min-width: 860px) { .timeline { max-width: 860px; } }
+
+/* =========================================================
+   Referenzen
+   ========================================================= */
+.refs { display: grid; gap: 20px; margin-top: 32px; }
+@media (min-width: 860px) { .refs { grid-template-columns: repeat(2, 1fr); } }
+.ref {
+  position: relative; margin: 0; display: flex; flex-direction: column; gap: 18px;
+  padding: 28px 24px 22px; border-radius: var(--radius); background: var(--surface);
+  border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+.ref::before { content: ""; position: absolute; left: 0; top: 24px; bottom: 24px; width: 4px; border-radius: 0 4px 4px 0; background: var(--accent); }
+.ref-mark { width: 34px; height: 34px; color: var(--accent); opacity: .35; }
+.ref blockquote { margin: 0; display: grid; gap: 12px; }
+.ref blockquote p { font-size: 1.05rem; line-height: 1.6; color: var(--text); font-style: italic; }
+.ref-note { font-size: .78rem; color: var(--text-muted); margin-top: -8px; }
+.ref figcaption { margin-top: auto; display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid var(--border); }
+.ref-logo { flex: none; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 10px; background: var(--accent-soft); color: var(--accent-text); font-weight: 800; font-size: .8rem; }
+.ref figcaption strong { display: block; font-weight: 650; }
+.ref figcaption span span { color: var(--text-muted); font-size: .85rem; }
+.refs-more { margin-top: 22px; font-size: .92rem; }
+.refs-more a { font-weight: 600; }
 
 /* =========================================================
    Skills

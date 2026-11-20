@@ -21,7 +21,7 @@
       "about.lang": "Sprachen", "about.langList": "Französisch (Muttersprache) · Deutsch (C1) · Englisch (B2)",
       "projects.h": "Projekte", "projects.sub": "Jeweils mit Problem, Lösung und Ergebnis.", "filter.all": "Alle",
       "projects.more": "Weitere Projekte auf GitHub",
-      "exp.h": "Berufserfahrung", "certs.h": "Zertifikate",
+      "exp.h": "Berufserfahrung", "certs.h": "Zertifikate", "nav.refs": "Referenzen", "refs.h": "Referenzen", "refs.sub": "Wörtliche Auszüge aus meinen Arbeitszeugnissen.", "refs.more": "Vollständige Arbeitszeugnisse auf Anfrage", refTranslated: "", qOpen: "\u201E", qClose: "\u201C",
       "contact.h": "Kontakt", "contact.text": "Ich suche eine Stelle als Full-Stack Software Developer oder AI Engineer",
       "contact.when": "ab Datum · Werkstudent/Vollzeit · Region/remote", "contact.text2": "Am schnellsten erreichen Sie mich per E-Mail.",
       "footer.imprint": "Impressum",
@@ -46,7 +46,7 @@
       "about.lang": "Languages", "about.langList": "French (native) · German (C1) · English (B2)",
       "projects.h": "Projects", "projects.sub": "Each with problem, solution and result.", "filter.all": "All",
       "projects.more": "More projects on GitHub",
-      "exp.h": "Experience", "certs.h": "Certificates",
+      "exp.h": "Experience", "certs.h": "Certificates", "nav.refs": "References", "refs.h": "References", "refs.sub": "Verbatim excerpts from my employment references.", "refs.more": "Full references available on request", refTranslated: "Translated from the German original.", qOpen: "\u201C", qClose: "\u201D",
       "contact.h": "Contact", "contact.text": "I am looking for a position as Full-Stack Software Developer or AI Engineer",
       "contact.when": "from date · working student/full-time · region/remote", "contact.text2": "Email is the fastest way to reach me.",
       "footer.imprint": "Legal notice",
@@ -86,7 +86,9 @@
   }
   // ⟦…⟧ → gelb markierter Platzhalter
   function rich(s) {
-    return esc(s).replace(/⟦(.*?)⟧/g, '<mark class="ph">$1</mark>');
+    return esc(s)
+      .replace(/⟦(.*?)⟧/g, '<mark class="ph">$1</mark>')
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
   }
   function t(v) { return v && typeof v === "object" ? (v[lang] != null ? v[lang] : v.de) : v; }
   function ui(key) { return UI[lang][key] || UI.de[key] || key; }
@@ -158,9 +160,26 @@
             "<h3>" + esc(t(e.role)) + "</h3>" +
             '<p class="tl-company">' + esc(e.company) + "</p>" +
             "<ul>" + t(e.points).map(function (x) { return "<li>" + rich(x) + "</li>"; }).join("") + "</ul>" +
-            '<ul class="tags tags-sm">' + e.tech.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" +
+            '<ul class="tags tags-sm">' + e.tech.map(function (x) { return "<li>" + esc(t(x)) + "</li>"; }).join("") + "</ul>" +
           "</div>" +
         "</li>"
+      );
+    }).join("");
+  }
+
+  /* ---------- Referenzen ---------- */
+  function renderTestimonials() {
+    var el = document.getElementById("testimonial-list");
+    if (!el || !C.testimonials) return;
+    el.innerHTML = C.testimonials.map(function (r) {
+      return (
+        '<figure class="ref">' +
+          '<svg class="ref-mark" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M13 8C7.5 9.6 4 13.8 4 19.5 4 23 6.2 25 9 25c2.6 0 4.5-1.9 4.5-4.4 0-2.4-1.7-4.1-4-4.1-.5 0-.9 0-1.2.1.6-2.8 2.7-5 5.7-6.2zm15 0c-5.5 1.6-9 5.8-9 11.5 0 3.5 2.2 5.5 5 5.5 2.6 0 4.5-1.9 4.5-4.4 0-2.4-1.7-4.1-4-4.1-.5 0-.9 0-1.2.1.6-2.8 2.7-5 5.7-6.2z"/></svg>' +
+          "<blockquote>" + t(r.quotes).map(function (q) { return "<p>" + esc(ui("qOpen") + q + ui("qClose")) + "</p>"; }).join("") + "</blockquote>" +
+          (lang === "en" ? '<p class="ref-note">' + esc(ui("refTranslated")) + "</p>" : "") +
+          '<figcaption><span class="ref-logo" aria-hidden="true">' + esc(r.initials) + "</span>" +
+            "<span><strong>" + esc(r.company) + "</strong><span>" + esc(t(r.source)) + "</span></span></figcaption>" +
+        "</figure>"
       );
     }).join("");
   }
@@ -227,7 +246,7 @@
     filterBtns.forEach(function (b) { var f = b.dataset.filter; if (f !== "all") b.textContent = labels[f]; });
     updateThemeLabel();
     updateMenuLabel();
-    renderProjects(); renderTimeline(); renderSkills(); renderCerts();
+    renderProjects(); renderTimeline(); renderTestimonials(); renderSkills(); renderCerts();
   }
   document.getElementById("lang-toggle").addEventListener("click", function () {
     lang = lang === "de" ? "en" : "de";
