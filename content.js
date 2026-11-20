@@ -288,7 +288,7 @@ window.CONTENT = {
     { icon: "server", name: { de: "Backend", en: "Backend" }, items: ["Spring Boot", "FastAPI", "Flask", "REST APIs", "Microservices"] },
     { icon: "layout", name: { de: "Frontend", en: "Frontend" }, items: ["React", "React Native", "Streamlit", "HTML/CSS"] },
     { icon: "db", name: { de: "Datenbanken", en: "Databases" }, items: ["PostgreSQL", "MySQL", "Supabase", { de: "Vektordatenbanken", en: "Vector databases" }] },
-    { icon: "cloud", name: { de: "DevOps & Methoden", en: "DevOps & methods" }, items: ["Docker", "Git", "GitHub Actions", "CI/CD", "Linux", "Scrum"] },
+    { icon: "cloud", name: { de: "DevOps & Methoden", en: "DevOps & methods" }, items: ["Docker", "Git", "GitHub Actions", "CI/CD", "n8n", "Linux", "Scrum"] },
     { icon: "spark", name: { de: "KI-Entwicklungswerkzeuge", en: "AI dev tools" }, items: ["Claude Code", "GitHub Copilot", "Cursor"] }
   ],
 
@@ -306,8 +306,8 @@ window.CONTENT = {
         { title: "Fundamentals of Building AI Agents", url: "https://coursera.org/verify/8AOD0EJJ8ZHD" },
         { title: "Agentic AI with LangChain and LangGraph", url: "https://coursera.org/verify/WTR6KQI1Y6RR" },
         { title: "Agentic AI with LangGraph, CrewAI, AutoGen and BeeAI", url: "https://coursera.org/verify/8N7IS64Y8RCJ" },
-        { title: "Build AI Agents using MCP" },
-        { title: "RAG and Agentic AI Capstone Project" }
+        { title: "Build AI Agents using MCP", url: "https://www.coursera.org/account/accomplishments/verify/88A0ITEBKG29" },
+        { title: "RAG and Agentic AI Capstone Project", url: "https://www.coursera.org/account/accomplishments/verify/1HLYONM8G4W2" }
       ]
     },
     {
@@ -316,6 +316,7 @@ window.CONTENT = {
       note: { de: "Umfasst die ersten 4 Kurse des Professional Certificate", en: "Covers the first 4 courses of the Professional Certificate" }
     },
     { title: "Generative AI with Large Language Models", issuer: "AWS · DeepLearning.AI", date: { de: "Feb. 2026", en: "Feb 2026" }, url: "https://coursera.org/verify/GF5WYGO0BZEM", highlight: true },
+    { title: "Workflow Automation with n8n: Logic, Data & Error Handling", issuer: "LearnKartS", date: { de: "Aug. 2026", en: "Aug 2026" }, url: "https://coursera.org/verify/PEJ2C5RRQWRV" },
     { title: "Developing AI Applications with Python and Flask", issuer: "IBM", date: { de: "März 2026", en: "Mar 2026" }, url: "https://coursera.org/verify/C9I9IXJ4FQ97" },
     { title: "Python for Data Science, AI & Development", issuer: "IBM", date: { de: "März 2026", en: "Mar 2026" }, url: "https://coursera.org/verify/RSBW4CO2NK7W" },
     { title: "Continuous Integration and Continuous Delivery (CI/CD)", issuer: "IBM", date: { de: "Mai 2026", en: "May 2026" }, url: "https://coursera.org/verify/EO971GKTQ7R9" },
